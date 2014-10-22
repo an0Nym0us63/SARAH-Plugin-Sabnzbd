@@ -1,0 +1,8 @@
+#sabnzbd .portlet-header,
+#sabnzbd .portlet-footer {
+  background-color: #f2e237;
+}
+#sabnzbd .portlet-body {
+  color: #FFF;
+  background: #f2e237;
+}

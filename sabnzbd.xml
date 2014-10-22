@@ -1,0 +1,30 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="rulesabnzbd" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="rulesabnzbd" scope="public">
+    <example>Sarah met en pause le téléchargement</example>
+    <tag>out.action=new Object(); </tag>
+    <item>Sarah</item>
+
+    <one-of>
+      <item>met en pause les téléchargements <tag>out.action.sabnzbd = "Pause_all";</tag></item>
+      <item>active les téléchargements <tag>out.action.sabnzbd = "Resume_all";</tag></item>
+      <item>met la vitesse des téléchargements <tag>out.action.sabnzbd = "Set_speed";</tag></item>  
+    </one-of>
+    <item repeat="0-1">
+      <item>à</item>
+      <one-of>
+        <item>100 <tag> out.action.speed=100; </tag></item>
+        <item>200 <tag> out.action.speed=200; </tag></item>
+        <item>300 <tag> out.action.speed=300; </tag></item>
+        <item>400<tag> out.action.speed=400; </tag></item>
+        <item>500 <tag> out.action.speed=500; </tag></item>
+        <item>600 <tag> out.action.speed=600; </tag></item>
+        <item>1000 <tag> out.action.speed=1000; </tag></item>
+        <item>1500 <tag> out.action.speed=1500; </tag></item>
+        <item>fond <tag> out.action.speed=''; </tag></item>
+
+      </one-of>
+    </item>
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/sabnzbd";</tag>
+    
+  </rule>  
+</grammar>
