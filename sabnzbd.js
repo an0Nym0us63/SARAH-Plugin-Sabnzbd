@@ -8,10 +8,14 @@ exports.action = function(data, callback, config, SARAH){
 		console.log("La variable apikey n'est pas configurée");
 		return callback({'tts' : "La variable A P I n'est pas configurée"})};
 
-
 if(data.sabnzbd=='Pause_all'){
-  url=config.url+'/sabnzbd/api?mode=pause&apikey='+config.apikey;
-  phrase="C'est en pause."};
+  if (data.time) {
+	url=config.url+'/sabnzbd/api?mode=config&name=set_pause&value='+data.time+'&apikey='+config.apikey
+	phrase="C'est en pause pour "+data.time+" minutes"}
+  else {
+	url=config.url+'/sabnzbd/api?mode=pause&apikey='+config.apikey
+	phrase="C'est en pause."};
+  };
 if(data.sabnzbd=='Resume_all'){
   url=config.url+'/sabnzbd/api?mode=resume&apikey='+config.apikey;
   phrase="C'est remis"};
@@ -51,7 +55,7 @@ var request = require('request');
 			if (data.detail=="yes") {
 				phrase="Il n'y en a pas"}
 			else {
-			phrase="Non. Aucun."}}
+			phrase="Non, Aucun."}}
 		else {
 			if (data.detail=="yes") {
 			for (var i = 0; i<nbelement;i++){

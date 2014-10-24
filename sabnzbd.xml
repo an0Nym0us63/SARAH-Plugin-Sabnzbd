@@ -8,13 +8,17 @@
       <item>met en pause les téléchargements <tag>out.action.sabnzbd = "Pause_all";</tag></item>
       <item>active les téléchargements <tag>out.action.sabnzbd = "Resume_all";</tag></item>
       <item>met la vitesse des téléchargements <tag>out.action.sabnzbd = "Set_speed";</tag></item>
+	  <item>enlève la limite de vitesse des téléchargements <tag>out.action.sabnzbd = "Set_speed";out.action.speed='';</tag></item>
       <item>quel est la version de Sab<tag>out.action.sabnzbd = "Version";</tag></item>
 	  <item>y a t'il des téléchargments en cours<tag>out.action.sabnzbd = "Queue";</tag></item>
 	  <item>donne le détail des téléchargments en cours<tag>out.action.sabnzbd = "Queue";out.action.detail = "yes";</tag></item>
 	  
     </one-of>
     <item repeat="0-1">
-      <item>à</item>
+      <one-of>
+		<item>à</item>
+		<item>pendant</item>
+	  </one-of>
       <one-of>
         <item>cent<tag> out.action.speed=100; </tag></item>
         <item>deux cent<tag> out.action.speed=200; </tag></item>
@@ -25,7 +29,25 @@
         <item>mille<tag> out.action.speed=1000; </tag></item>
         <item>mille cinq cent<tag> out.action.speed=1500; </tag></item>
         <item>fond <tag> out.action.speed=''; </tag></item>
-
+		
+		<item>une minute<tag> out.action.time=1; </tag></item>
+        <item>deux minutes<tag> out.action.time=2; </tag></item>
+        <item>cinq minutes<tag> out.action.time=5; </tag></item>
+        <item>dix minutes<tag> out.action.time=10; </tag></item>
+        <item>quinze minutes<tag> out.action.time=15; </tag></item>
+        <item>un quart d'heure<tag> out.action.time=15; </tag></item>
+        <item>ving minutes<tag> out.action.time=20; </tag></item>
+        <item>trente minutes<tag> out.action.time=30; </tag></item>
+        <item>une demi heure<tag> out.action.time=30; </tag></item>
+        <item>quarante cinq minutes<tag> out.action.time=45; </tag></item>
+        <item>trois quart d'heure<tag> out.action.time=45; </tag></item>
+        <item>soixante minutes<tag> out.action.time=60; </tag></item>
+        <item>une heure<tag> out.action.time=60; </tag></item>
+        <item>quatre vingt dix minutes<tag> out.action.time=90; </tag></item>		
+        <item>une heure trente<tag> out.action.time=90; </tag></item>
+        <item>une heure et demi<tag> out.action.time=90; </tag></item>
+		<item>deux heures<tag> out.action.time=120; </tag></item>
+		<item>six heures<tag> out.action.time=360; </tag></item>
       </one-of>
     </item>
     <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/sabnzbd";</tag>
