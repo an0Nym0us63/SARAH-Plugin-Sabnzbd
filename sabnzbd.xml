@@ -7,19 +7,23 @@
     <one-of>
       <item>met en pause les téléchargements <tag>out.action.sabnzbd = "Pause_all";</tag></item>
       <item>active les téléchargements <tag>out.action.sabnzbd = "Resume_all";</tag></item>
-      <item>met la vitesse des téléchargements <tag>out.action.sabnzbd = "Set_speed";</tag></item>  
+      <item>met la vitesse des téléchargements <tag>out.action.sabnzbd = "Set_speed";</tag></item>
+      <item>quel est la version de Sab<tag>out.action.sabnzbd = "Version";</tag></item>
+	  <item>y a t'il des téléchargments en cours<tag>out.action.sabnzbd = "Queue";</tag></item>
+	  <item>donne le détail des téléchargments en cours<tag>out.action.sabnzbd = "Queue";out.action.detail = "yes";</tag></item>
+	  
     </one-of>
     <item repeat="0-1">
       <item>à</item>
       <one-of>
-        <item>100 <tag> out.action.speed=100; </tag></item>
-        <item>200 <tag> out.action.speed=200; </tag></item>
-        <item>300 <tag> out.action.speed=300; </tag></item>
-        <item>400<tag> out.action.speed=400; </tag></item>
-        <item>500 <tag> out.action.speed=500; </tag></item>
-        <item>600 <tag> out.action.speed=600; </tag></item>
-        <item>1000 <tag> out.action.speed=1000; </tag></item>
-        <item>1500 <tag> out.action.speed=1500; </tag></item>
+        <item>cent<tag> out.action.speed=100; </tag></item>
+        <item>deux cent<tag> out.action.speed=200; </tag></item>
+        <item>trois cent<tag> out.action.speed=300; </tag></item>
+        <item>quatre cent<tag> out.action.speed=400; </tag></item>
+        <item>cinq cent<tag> out.action.speed=500; </tag></item>
+        <item>six cent<tag> out.action.speed=600; </tag></item>
+        <item>mille<tag> out.action.speed=1000; </tag></item>
+        <item>mille cinq cent<tag> out.action.speed=1500; </tag></item>
         <item>fond <tag> out.action.speed=''; </tag></item>
 
       </one-of>
